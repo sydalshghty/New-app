@@ -1,0 +1,15 @@
+.loading{
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 180px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+@media (max-width: 768px){
+    .loading{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

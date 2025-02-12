@@ -1,0 +1,133 @@
+.login-departament{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #DDD;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-departament .login-content{
+    width: 530px;
+    height: 623px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+@media (max-width: 992px){
+    .login-departament .login-content{
+        width: 430px;
+        height: 550px;
+    }
+}
+.login-departament .login-content .logo-content{
+    margin-top: 40px;
+    text-align: center;
+}
+.login-departament .login-content .logo-content p{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 11px;
+    letter-spacing: 0.5px;
+    font-family:  sans-serif;
+    color: #5A67BA;
+    margin-top: 15px;
+}
+.login-departament .login-content h3{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    font-family: sans-serif;
+    color: #393537;
+    margin-top: 40px;
+    text-align: center;
+}
+.login-departament .login-content form{
+    margin-top: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.login-departament .login-content form .col-Username,
+.login-departament .login-content form .col-Password{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.login-departament .login-content form .col-Username label,
+.login-departament .login-content form .col-Password label{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.5px;
+    font-family: sans-serif;
+    color: #393537;
+    margin-bottom: 10px;
+}
+.login-departament .login-content form .col-Username input,
+.login-departament .login-content form .col-Password input{
+    height: 40px;
+    padding: 15px;
+    border: 1px solid #DEDEDE;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17.5px;
+    font-family: sans-serif;
+    color: #CCCCCC;
+    caret-color: #393537;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.login-departament .login-content form .col-Username input:focus,
+.login-departament .login-content form .col-Password input:focus{
+    outline: none;
+}
+.login-departament .login-content form .col-Username input::placeholder,
+.login-departament .login-content form .col-Password input::placeholder{
+    padding-left: 5px;
+}
+.login-departament .login-content form .col-Login{
+    width: 100%;
+}
+.login-departament .login-content form .col-Login input{
+    width: 100%;
+    height: 40px;
+    background-color: #5A67BA;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: sans-serif;
+    line-height: 18px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+@media (max-width: 620px) {
+    .login-departament .login-content {
+        width: 360px;
+        height: 550px;
+    }
+    .login-departament .login-content form {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media (max-width: 420px){
+    .login-departament .login-content {
+        width: 320px;
+        height: 530px;
+    }
+}

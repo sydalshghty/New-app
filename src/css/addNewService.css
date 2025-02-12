@@ -1,0 +1,12 @@
+.addNewSlider-departament .content-upload-product .select-image{
+    position: relative;
+}
+.addNewSlider-departament .content-upload-product .select-image img{
+    position: absolute;
+}
+.addNewSlider-departament .content-upload-product .select-image input{
+    position: absolute;
+    margin-top: -25px;
+    cursor: pointer;
+    opacity: 0;
+}

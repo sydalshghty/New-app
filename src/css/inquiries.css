@@ -1,0 +1,224 @@
+.inquiries-Departament{
+    width: 100%;  
+}
+.inquiries-Departament .heading-inquiries{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 15px;
+    border-bottom: 0.5px solid var(--border-color);
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.inquiries-Departament .heading-inquiries .p-inquiries{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+    color: #1F384C;
+}
+.inquiries-Departament .AllInquiries-P{
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 30px;
+}
+.inquiries-Departament .AllInquiries-P p{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    color: #1F384C;
+    line-height: 23px;
+}
+@media (max-width: 768px) {
+    .inquiries-Departament .heading-inquiries,
+    .inquiries-Departament .AllInquiries-P {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .inquiries-Departament .heading-inquiries .p-inquiries,
+    .inquiries-Departament .AllInquiries-P p {
+        font-size: 15px;
+    }
+}
+.inquiries-Departament .AllInquiries-Cols{
+    width: 100%;
+    margin-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    background-color: #F1F2F7;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .P-Id{
+    width: 45px;
+    height: 45px;
+    background-color: #5A67BA;
+    margin-right: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content{
+    
+}
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .information-Inquiry{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .information-Inquiry p{
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #000000;
+    font-family: sans-serif;
+    line-height: 13px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .information-Inquiry p:nth-child(3){
+    cursor: pointer;
+}
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .P-RH-Model{
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 13px;
+    color: #000000;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .Material-Colors{
+    display: flex;
+    align-items: center;
+}
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .Material-Colors p{
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+    color: #000000;
+    margin-right: 20px;
+}
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .Material-Colors li{
+    list-style-type: none;
+    width: 28px;
+    height: 28px;
+    background-color: #000000;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey img{
+    position: absolute;
+    right: 20px;
+}
+@media (max-width: 1100px) {
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .information-Inquiry {
+        max-width: 400px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .information-Inquiry p{
+        font-size: 17px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .P-RH-Model,
+        .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .Material-Colors p{
+        font-size: 15px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .Material-Colors li{
+        width: 24px;
+        height: 24px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .P-Id{
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey{
+        height: 125px;
+    }
+}
+@media (max-width: 768px){
+    .inquiries-Departament .AllInquiries-Cols{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 650px){
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey {
+        height: 150px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .information-Inquiry {
+        max-width: 300px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .P-Id{
+        margin-right: 20px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .information-Inquiry p{
+        font-size: 15px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey img{
+        margin-top: 40px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .P-RH-Model,
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .Material-Colors p {
+        font-size: 13px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .Material-Colors li{
+        width: 20px;
+        height: 20px;
+    }
+}
+@media (max-width: 600px){
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .information-Inquiry p{
+        font-size: 14px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .P-Id{
+       min-width: 30px;
+       max-height: 28px;
+        font-size: 13px;
+    }
+}
+@media (max-width: 520px){
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey img{
+        right: 10px;
+    }
+    .inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .Material-Colors p{
+        margin-right: 10px;
+    }
+}
+@media (max-width: 450px){
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey .inquiry-Content .information-Inquiry p{
+    font-size: 13px;
+}
+.inquiries-Departament .AllInquiries-Cols .Col-Inquiriey img {
+    display: none;
+}
+}

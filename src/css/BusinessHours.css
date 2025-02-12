@@ -1,0 +1,30 @@
+.BusinessHours-Departament{
+    width: 100%;
+}
+.BusinessHours-Departament .heading-Business{
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-bottom: 0.5px solid var(--border-color);
+}
+.BusinessHours-Departament .heading-Business .P-Business{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    color: #1F384C;
+}
+@media (max-width: 768px){
+    .BusinessHours-Departament .heading-Business{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .BusinessHours-Departament .heading-Business .P-Business{
+        font-size: 15px;
+    }
+}

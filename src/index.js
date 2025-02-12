@@ -6,8 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 //import { HashRouter  } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter basename='New-app'>
+  <BrowserRouter basename='new-app'>
     <App />
   </BrowserRouter>
 );
-

@@ -1,0 +1,141 @@
+.AboutUs-Deparament{
+    width: 100%;
+}
+.AboutUs-Deparament .heading-AboutUs{
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-bottom: 0.5px solid var(--border-color);
+}
+.AboutUs-Deparament .heading-AboutUs .P-AboutUs{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    color: #1F384C;
+}
+.AboutUs-Deparament .Col-AboutUs{
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.AboutUs-Deparament .Col-AboutUs div{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.AboutUs-Deparament .Col-AboutUs div label{
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.AboutUs-Deparament .Col-AboutUs div input{
+    width: 100%;
+    height: 99px;
+    background-color: #F6F6FB;
+    padding: 20px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+    color: #1F384C;
+    caret-color: #1F384C;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.AboutUs-Deparament .Col-AboutUs div input::placeholder{
+    padding-left: 5px;
+}
+.AboutUs-Deparament .Col-AboutUs button{
+    position: relative;
+    width: 128px;
+    height: 37px;
+    background-color: #5A67BA;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    z-index: 1;
+    transition: color 0.7s ease;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-transition: color 0.7s ease;
+    -moz-transition: color 0.7s ease;
+    -ms-transition: color 0.7s ease;
+    -o-transition: color 0.7s ease;
+}
+.AboutUs-Deparament .Col-AboutUs button::before,
+.AboutUs-Deparament .Col-AboutUs button::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: -1;
+    transition: width 0.7s ease;
+    -webkit-transition: width 0.7s ease;
+    -moz-transition: width 0.7s ease;
+    -ms-transition: width 0.7s ease;
+    -o-transition: width 0.7s ease;
+}
+.AboutUs-Deparament .Col-AboutUs button::before{
+    left: 50%;
+}
+.AboutUs-Deparament .Col-AboutUs button::after{
+    right: 50%;
+}
+.AboutUs-Deparament .Col-AboutUs button:hover{
+    color: #5A67BA;
+    border: 1px solid #5A67BA;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+.AboutUs-Deparament .Col-AboutUs button:hover::before,
+.AboutUs-Deparament .Col-AboutUs button:hover::after{
+    width: 50%;
+}
+@media (max-width: 768px){
+    .AboutUs-Deparament .heading-AboutUs,
+    .AboutUs-Deparament .Col-AboutUs{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .AboutUs-Deparament .heading-AboutUs .P-AboutUs{
+        font-size: 15px;
+    }
+}
+@media (max-width: 600px){
+    .AboutUs-Deparament .Col-AboutUs{
+        flex-direction: column;
+    }
+    .AboutUs-Deparament .Col-AboutUs div{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}

@@ -16,7 +16,7 @@ function Login() {
     formData.append("password", Password);
 
     try {
-      const response = await fetch(`https://united-hanger-2025.up.railway.app/api/login`, {
+      const response = await fetch(`/api/login`, {
         method: "POST",
         body: formData, 
       });

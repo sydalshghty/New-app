@@ -2,7 +2,7 @@
   "name": "dashboard-united-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sydalshghty.github.io/New-app",
+  "homepage": ".",
   "dependencies": {
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",

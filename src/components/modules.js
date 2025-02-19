@@ -16,7 +16,7 @@ function Modules() {
     const [products, setProducts] = useState([]);
 
     const getAllProducts = async () => {
-        await fetch("/api/products")
+        await fetch("https://united-hanger-2025.up.railway.app/api/products")
             .then((response) => response.json())
             .then((data) => setProducts(data.products))
     }
@@ -53,7 +53,7 @@ function Modules() {
             }
         }).then(data => {
             if (data.isConfirmed) {
-                fetch(`/api/products/${productID}`, {
+                fetch(`https://united-hanger-2025.up.railway.app/api/products/${productID}`, {
                    method: "DELETE",
                     headers: {
                         "Authorization": `Bearer ${token}`,

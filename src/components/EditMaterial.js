@@ -38,7 +38,7 @@ function EditMaterial() {
     const [Material, setMaterial] = useState([]);
 
     const getMaterial = async () => {
-       await  fetch(`/api/materials/${MaterialID}`, {
+       await  fetch(`https://united-hanger-2025.up.railway.app//api/materials/${MaterialID}`, {
             method: "GET",
             headers: {
                     "Authorization": `Bearer ${token}` 
@@ -58,7 +58,7 @@ function EditMaterial() {
         const formData = new FormData();
         formData.append("name", newName);
 
-        fetch(`/api/materials/${MaterialID}`, {
+        fetch(`https://united-hanger-2025.up.railway.app//api/materials/${MaterialID}`, {
             method: "PUT",
             headers: {
                 "Authorization": `Bearer ${token}`

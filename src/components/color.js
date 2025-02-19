@@ -66,7 +66,7 @@ function Color() {
     const [item, setItem] = useState([]);
 
     const getColor = async () => {
-      await fetch(`/api/colors/${ColorID}`, {
+      await fetch(`https://united-hanger-2025.up.railway.app//api/colors/${ColorID}`, {
             method: "GET",
             headers: {
                     "Authorization": `Bearer ${token}` 
@@ -87,7 +87,7 @@ function Color() {
         formData.append("name", name);
         formData.append("hex_code", hex_code);
 
-       await fetch(`/api/colors/${ColorID}`, {
+       await fetch(`https://united-hanger-2025.up.railway.app//api/colors/${ColorID}`, {
             method: "PUT",
             headers: {
                     "Authorization": `Bearer ${token}` 

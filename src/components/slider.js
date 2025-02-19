@@ -22,7 +22,7 @@ function Slider() {
     const fetchData = async () => {
 
 
-        await fetch("/api/sliders", {
+        await fetch("https://united-hanger-2025.up.railway.app/api/sliders", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}` 
@@ -54,7 +54,7 @@ function Slider() {
             }
         }).then((data) => {
             if (data.isConfirmed) {
-                fetch(`/api/slider/${productID}`, {
+                fetch(`https://united-hanger-2025.up.railway.app/api/slider/${productID}`, {
                     method: "Delete",
                     headers: {
                         "Authorization": `Bearer ${token}`,

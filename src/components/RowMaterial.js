@@ -39,7 +39,7 @@ function RowMaterial() {
             }
         }).then((data) => {
             if (data.isConfirmed) {
-                fetch(`/api/materials/${MaterialID}`, {
+                fetch(`https://united-hanger-2025.up.railway.app//api/materials/${MaterialID}`, {
                     method: "DELETE",
                     headers: {
                         "Authorization": `Bearer ${token}`
@@ -53,7 +53,7 @@ function RowMaterial() {
     const [materials, setMaterials] = useState([]);
 
     const getAllMaterials = async () => {
-      await fetch(`/api/materials`, {
+      await fetch(`https://united-hanger-2025.up.railway.app//api/materials`, {
             method: "GET",
             headers: {
                     "Authorization": `Bearer ${token}` 

@@ -23,7 +23,7 @@ function AddNewSize() {
         formData.append("value", valueSize);
         formData.append("unit", unitSize);
 
-      await fetch(`/api/sizes/new`, {
+      await fetch(`https://united-hanger-2025.up.railway.app//api/sizes/new`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`

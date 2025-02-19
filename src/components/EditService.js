@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom";
 import { token } from "./token";
+import "../css/EditService.css";
+
 function EditService() {
 
     const { EditServiceID } = useParams();
@@ -16,7 +18,7 @@ function EditService() {
         const handleDelete = () => {
         Swal.fire({
             title: "Delete Service",
-            text: "Are You Sure You want to delete Service 1",
+            text: "Are You Sure You want to delete Service",
             showCancelButton: true,
             cancelButtonText: "Cancel",
             confirmButtonText: "Delete",
@@ -41,7 +43,7 @@ function EditService() {
     }
 
     const getDataService = () => {
-        fetch(`/api/service/${EditServiceID}`, {
+        fetch(`https://united-hanger-2025.up.railway.app/api/service/${EditServiceID}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -62,7 +64,7 @@ function EditService() {
         formData.append("title", TitleService);
         formData.append("description", DescService);
 
-        fetch(`/api/service/${EditServiceID}`, {
+        fetch(`https://united-hanger-2025.up.railway.app/api/service/${EditServiceID}`, {
             method: "PUT",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -85,7 +87,7 @@ function EditService() {
             </div>
             <div className="col-product-Edit">
                 <div className="col-image-product">
-                    <img src={EditService.image_path} alt="imgProduct"/>
+                    <img style={{maxWidth: "420px"}} src={EditService.image_path} alt="imgProduct"/>
                 </div>
                 <div className="content-product-Edit">
                     <div className="col-title">

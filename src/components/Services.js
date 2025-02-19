@@ -15,7 +15,7 @@ function Services() {
     const [services, setServices] = useState([]);
 
     const fetchData = async () => {
-        await fetch("/api/services/get_all")
+        await fetch("https://united-hanger-2025.up.railway.app/api/services/get_all")
             .then((response) => response.json())
             .then((data) => setServices(data.services));
     }
@@ -55,7 +55,7 @@ function Services() {
             }
         }).then((data) => {
             if (data.isConfirmed) {
-                fetch(`/api/service/${serviceID}`, {
+                fetch(`https://united-hanger-2025.up.railway.app/api/service/${serviceID}`, {
                     method: "Delete",
                     headers: {
                         "Authorization": `Bearer ${token}`,

@@ -23,7 +23,7 @@ function AddNewMaterial() {
         const formData = new FormData();
         formData.append("name", nameMaterial);
 
-      await fetch(`/api/materials/new`, {
+      await fetch(`https://united-hanger-2025.up.railway.app//api/materials/new`, {
             method: "POST",
             headers: {
                     "Authorization": `Bearer ${token}` 

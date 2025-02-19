@@ -38,7 +38,7 @@ function Sizes() {
             }
         }).then(data => {
             if (data.isConfirmed) {
-                fetch(`/api/sizes/${id}`, {
+                fetch(`https://united-hanger-2025.up.railway.app//api/sizes/${id}`, {
                     method: "DELETE",
                     headers: {
                             "Authorization": `Bearer ${token}`
@@ -54,7 +54,7 @@ function Sizes() {
     const [sizes, setSizes] = useState([]);
 
     const getAllSizes = () => {
-        fetch(`/api/sizes`, {
+        fetch(`https://united-hanger-2025.up.railway.app//api/sizes`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`

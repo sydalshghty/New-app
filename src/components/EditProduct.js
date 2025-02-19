@@ -19,7 +19,7 @@ function EditProduct() {
     const { ProductID } = useParams();
  
     const getProductData = async () => {
-        await fetch(`/api/products/${ProductID}`, {
+        await fetch(`https://united-hanger-2025.up.railway.app/api/products/${ProductID}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,

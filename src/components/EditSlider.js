@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 //import { sliderID } from "./sliderID";
 import { token } from "./token";
 import { useEffect } from "react";
+
 function EditSlider() {
 
        const handleDelete = () => {
@@ -38,7 +39,7 @@ function EditSlider() {
     }
 
     const fetchData = async () => {
-      await  fetch(`/api/slider/2`, {
+      await  fetch(`https://united-hanger-2025.up.railway.app/api/slider/2`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,

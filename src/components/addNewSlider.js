@@ -42,7 +42,7 @@ function AddNewSlider() {
         formData.append("description", sliderDescription); // إضافة الوصف
 
         try {
-            const response = await fetch("/api/new_slider", {
+            const response = await fetch("https://united-hanger-2025.up.railway.app/api/new_slider", {
                 method: "POST",
                 headers: {
                     "Authorization": `Bearer ${token}` // التوكن

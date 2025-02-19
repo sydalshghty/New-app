@@ -112,7 +112,7 @@ function AddNewProduct() {
         formData.append("images", image3);
         formData.append("images", image4);
 
-        await fetch(`/api/products/new`, {
+        await fetch(`https://united-hanger-2025.up.railway.app/api/products/new`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`,

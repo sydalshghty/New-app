@@ -35,7 +35,7 @@ function AddNewService() {
         formData.append("title", titleService);
         formData.append("description", descService);
 
-        await fetch("/api/services/new",
+        await fetch("https://united-hanger-2025.up.railway.app//api/services/new",
             {
                 method: "POST",
                 headers: {

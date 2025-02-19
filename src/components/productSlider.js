@@ -21,7 +21,7 @@ function ProductSlider() {
         sliderId: sliderID
     })
     const fetchData = async () => {
-       await fetch(`/api/slider/${sliderID}`, {
+       await fetch(`https://united-hanger-2025.up.railway.app/api/slider/${sliderID}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -54,7 +54,7 @@ const [EditTitle, setEditTitle] = useState("");
         }
 
         try {
-            const response = await fetch(`/api/slider/${sliderID}`, {
+            const response = await fetch(`https://united-hanger-2025.up.railway.app/api/slider/${sliderID}`, {
                 method: "PUT",
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -85,7 +85,7 @@ const [EditTitle, setEditTitle] = useState("");
     const handleDelete = () => {
         Swal.fire({
             title: "Delete Slider",
-            text: "Are You Sure You want to delete Slider 1",
+            text: "Are You Sure You want to delete Slider",
             showCancelButton: true,
             cancelButtonText: "Cancel",
             confirmButtonText: "Delete",

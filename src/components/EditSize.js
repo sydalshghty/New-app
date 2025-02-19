@@ -39,7 +39,7 @@ function EditSize() {
     const [size, setSize] = useState([]);
 
     const getSizeOnly = () => {
-        fetch(`/api/sizes/${SizeID}`, {
+        fetch(`https://united-hanger-2025.up.railway.app//api/sizes/${SizeID}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -62,7 +62,7 @@ function EditSize() {
         formData.append("value", valueSize);
         formData.append("unit", unitSize);
 
-      await fetch(`/api/sizes/${SizeID}`, {
+      await fetch(`https://united-hanger-2025.up.railway.app//api/sizes/${SizeID}`, {
             method: "PUT",
             headers: {
                 "Authorization": `Bearer ${token}`

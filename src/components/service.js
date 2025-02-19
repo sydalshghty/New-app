@@ -20,7 +20,7 @@ function Service() {
     const handleDelete = () => {
         Swal.fire({
             title: "Delete Service",
-            text: "Are You Sure You want to delete Service 1",
+            text: "Are You Sure You want to delete Service",
             showCancelButton: true,
             cancelButtonText: "Cancel",
             confirmButtonText: "Delete",
@@ -49,7 +49,7 @@ function Service() {
     }
  
     const getServiceData = async () => {
-       await  fetch(`/api/service/${serviceID}`, {
+       await  fetch(`https://united-hanger-2025.up.railway.app/api/service/${serviceID}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`

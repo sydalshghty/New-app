@@ -15,7 +15,7 @@ function Colors() {
     const [AllColors, setAllColors] = useState([]);
 
     const getAllColors = async () => {
-        await fetch("/api/colors", {
+        await fetch("https://united-hanger-2025.up.railway.app//api/colors", {
           method: "GET",
             headers: {
                     "Authorization": `Bearer ${token}` 
@@ -52,7 +52,7 @@ function Colors() {
             }
         }).then((data) => {
             if (data.isConfirmed) {
-                fetch(`/api/colors/${id}`, {
+                fetch(`https://united-hanger-2025.up.railway.app//api/colors/${id}`, {
                     method: "DELETE",
                     headers: {
                     "Authorization": `Bearer ${token}` 
@@ -88,29 +88,30 @@ function Colors() {
                     <AddNew/>
                 </div>
             </div> 
-            {AllColors.map((color,index) => {
-                return (
-            <div className="main-product-colors" key={color.id}>
-                <div className="content-product" style={{backgroundColor: backgroundProduct(`${color.id}`)}}>
-                    <Link to={`/colors/${color.id}`} style={{textDecoration: "none", display: "flex", width: "100%"}}>
-                    <div className="col-text">
-                        <p className="id-product">{color.id}</p>
-                        <p className="background-color" style={{ backgroundColor: `${color.hex_code}`}}></p>
-                        <p className="title-product">{color.name}</p>
-                    </div>    
-                    </Link>
-                    <div className="Edit-Delete-Col">
-                                <img onClick={() => {
-                                    handleDelete(`${color.id}`)
-                        }} className="img-Delete" src={imgDelete} alt="img-Delete" />
-                        <Link to={`/colors/${color.id}`}>
-                            <img  className="img-Edit" src={imgEdit} alt="img-Edit"/>
+            {AllColors.length === 0 ? <Loading/> :
+                AllColors.map((color,index) => {
+                    return (
+                <div className="main-product-colors" key={color.id}>
+                    <div className="content-product" style={{backgroundColor: backgroundProduct(`${color.id}`)}}>
+                        <Link to={`/colors/${color.id}`} style={{textDecoration: "none", display: "flex", width: "100%"}}>
+                        <div className="col-text">
+                            <p className="id-product">{color.id}</p>
+                            <p className="background-color" style={{ backgroundColor: `${color.hex_code}`}}></p>
+                            <p className="title-product">{color.name}</p>
+                        </div>    
                         </Link>
+                        <div className="Edit-Delete-Col">
+                                    <img onClick={() => {
+                                        handleDelete(`${color.id}`)
+                            }} className="img-Delete" src={imgDelete} alt="img-Delete" />
+                            <Link to={`/colors/${color.id}`}>
+                                <img  className="img-Edit" src={imgEdit} alt="img-Edit"/>
+                            </Link>
+                        </div>
                     </div>
                 </div>
-            </div>
-                )
-            })}     
+                    )
+                })}      
         </div>
     )
 }

@@ -4,40 +4,103 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [Username, setUsername] = useState("");
-  const [Password, setPassword] = useState("");
-  const navigate = useNavigate();
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData();
-    formData.append("username", Username);
-    formData.append("password", Password);
-
+  const refreshAccessToken = async () => {
+    const refreshToken = localStorage.getItem("refreshToken");
+  
+    if (!refreshToken) {
+      console.error("No refresh token found, please login again.");
+      return null;
+    }
+  
     try {
-      const response = await fetch(`/api/login`, {
+      const response = await fetch("https://united-hanger-2025.up.railway.app/api/refresh", {
         method: "POST",
-        body: formData, 
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ refresh_token: refreshToken }),
       });
-
-      if (response.ok) {
-        const data = await response.json();
-        localStorage.setItem("accessToken", data.access_token);
-        localStorage.setItem("refreshToken", data.refresh_token);
-
-        alert("Login successful!");
-        navigate("/Products"); 
-      } else {
-        const errorData = await response.json();
-        alert(`Login failed! ${errorData.message || "Please check your credentials."}`);
+  
+      if (!response.ok) {
+        console.error("Failed to refresh token. Please login again.");
+        return null;
       }
+  
+      const data = await response.json();
+      localStorage.setItem("accessToken", data.access_token);
+      return data.access_token;
+  
     } catch (error) {
-      console.error("Error during login:", error);
-      alert("An unexpected error occurred. Please try again later.");
+      console.error("Error refreshing token:", error);
+      return null;
     }
   };
 
+  
+
+  const fetchWithAuth = async (url, options = {}) => {
+    let accessToken = localStorage.getItem("accessToken");
+  
+    if (!options.headers) {
+      options.headers = {};
+    }
+    options.headers["Authorization"] = `Bearer ${accessToken}`;
+  
+    let response = await fetch(url, options);
+  
+    if (response.status === 401) { // توكن منتهي الصلاحية
+      console.warn("Access token expired, trying to refresh...");
+  
+      accessToken = await refreshAccessToken();
+      if (!accessToken) {
+        console.error("Failed to refresh token, redirecting to login...");
+        window.location.href = "/login"; // إعادة توجيه المستخدم لتسجيل الدخول
+        return;
+      }
+  
+      // جرب الطلب مرة أخرى بعد تحديث التوكن
+      options.headers["Authorization"] = `Bearer ${accessToken}`;
+      response = await fetch(url, options);
+    }
+  
+    return response;
+  };
+
+  
+
+const [Username, setUsername] = useState("");
+const [Password, setPassword] = useState("");
+const navigate = useNavigate();
+
+const handleLogin = async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append("username", Username);
+  formData.append("password", Password);
+
+  try {
+    const response = await fetch("https://united-hanger-2025.up.railway.app/api/login", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      alert(`Login failed! ${errorData.message || "Please check your credentials."}`);
+      return;
+    }
+
+    const data = await response.json();
+    localStorage.setItem("accessToken", data.access_token);
+    localStorage.setItem("refreshToken", data.refresh_token);
+
+    alert("Login successful!");
+    navigate("/Slider");
+
+  } catch (error) {
+    console.error("Error during login:", error);
+    alert("An unexpected error occurred. Please try again later.");
+  }
+};
   return (
     <div className="login-departament">
       <div className="login-content">

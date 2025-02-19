@@ -51,7 +51,7 @@ function AddNewColor() {
         formData.append("hex_code", hex_code);
         formData.append("code", codeColor);
         
-      await fetch("/api/colors/new", {
+      await fetch("https://united-hanger-2025.up.railway.app//api/colors/new", {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}` 
